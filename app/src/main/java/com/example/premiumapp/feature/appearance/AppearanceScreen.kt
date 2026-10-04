@@ -90,8 +90,8 @@ fun AppearanceScreen(
                 ThemeOptionRow(
                     title = "AMOLED Dark",
                     subtitle = "Pure black backgrounds for OLED battery saving",
-                    isSelected = prefs.themeMode == ThemeMode.AMOLED_DARK,
-                    onClick = { viewModel.setThemeMode(ThemeMode.AMOLED_DARK) }
+                    isSelected = prefs.themeMode == ThemeMode.AMOLED,
+                    onClick = { viewModel.setThemeMode(ThemeMode.AMOLED) }
                 )
             }
 
@@ -209,7 +209,10 @@ private fun ThemeOptionRow(
         RadioButton(
             selected = isSelected,
             onClick = onClick,
-            colors = RadioButtonDefaults.colors(selectedColor = PremiumTheme.colors.primary)
+            colors = RadioButtonDefaults.colors(
+                selectedColor = PremiumTheme.colors.primary,
+                unselectedColor = PremiumTheme.colors.textTertiary
+            )
         )
     }
 }
@@ -236,7 +239,10 @@ private fun GridDensityRow(
         RadioButton(
             selected = isSelected,
             onClick = onClick,
-            colors = RadioButtonDefaults.colors(selectedColor = PremiumTheme.colors.primary)
+            colors = RadioButtonDefaults.colors(
+                selectedColor = PremiumTheme.colors.primary,
+                unselectedColor = PremiumTheme.colors.textTertiary
+            )
         )
     }
 }
@@ -263,7 +269,10 @@ private fun ThumbnailQualityRow(
         RadioButton(
             selected = isSelected,
             onClick = onClick,
-            colors = RadioButtonDefaults.colors(selectedColor = PremiumTheme.colors.primary)
+            colors = RadioButtonDefaults.colors(
+                selectedColor = PremiumTheme.colors.primary,
+                unselectedColor = PremiumTheme.colors.textTertiary
+            )
         )
     }
 }

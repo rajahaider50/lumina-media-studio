@@ -90,9 +90,10 @@ class PermissionsViewModel(
         return permissionManager.getRequiredPermissions(type)
     }
 
-    fun openAppSettings() {
+    fun openAppSettings(context: android.content.Context) {
         val intent = permissionManager.createAppSettingsIntent()
-        permissionManager.createAppSettingsIntent()
+        intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)
+        context.startActivity(intent)
     }
 }
 

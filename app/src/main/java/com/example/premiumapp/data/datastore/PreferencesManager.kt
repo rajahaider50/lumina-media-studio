@@ -35,7 +35,7 @@ class PreferencesManager(private val context: Context) {
         val onboarding = preferences[PreferencesKeys.ONBOARDING_COMPLETED] ?: false
         val themeModeStr = preferences[PreferencesKeys.THEME_MODE] ?: ThemeMode.SYSTEM.name
         val themeMode = try { ThemeMode.valueOf(themeModeStr) } catch (e: Exception) { ThemeMode.SYSTEM }
-        val dynamicColor = preferences[PreferencesKeys.DYNAMIC_COLOR] ?: true
+        val dynamicColor = preferences[PreferencesKeys.DYNAMIC_COLOR] ?: false
         val reduceMotion = preferences[PreferencesKeys.REDUCE_MOTION] ?: false
         val gridDensityStr = preferences[PreferencesKeys.GRID_DENSITY] ?: GridDensity.STANDARD.name
         val gridDensity = try { GridDensity.valueOf(gridDensityStr) } catch (e: Exception) { GridDensity.STANDARD }

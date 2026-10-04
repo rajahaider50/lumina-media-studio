@@ -3,6 +3,7 @@ package com.example.premiumapp.core.navigation
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -85,6 +86,7 @@ fun AppNavGraph(
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
+        contentWindowInsets = WindowInsets(0, 0, 0, 0),
         containerColor = PremiumTheme.colors.background,
         bottomBar = {
             if (showBottomBar) {
@@ -108,7 +110,7 @@ fun AppNavGraph(
             startDestination = Screen.Splash.route,
             modifier = Modifier
                 .fillMaxSize()
-                .padding(innerPadding)
+                .padding(bottom = innerPadding.calculateBottomPadding())
         ) {
             // 01 Splash
             composable(Screen.Splash.route) {

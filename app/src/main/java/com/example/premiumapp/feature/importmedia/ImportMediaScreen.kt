@@ -26,6 +26,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.premiumapp.design.components.ButtonVariant
@@ -160,6 +161,42 @@ fun ImportMediaScreen(
                             )
                             Text(
                                 text = "Select photos or videos from Downloads, SD card, or any specific folder on your device.",
+                                style = PremiumTheme.typography.bodySmall,
+                                color = PremiumTheme.colors.textSecondary
+                            )
+                        }
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(AppSpacing.md))
+
+                val context = LocalContext.current
+                PremiumCard(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = AppShapes.large,
+                    backgroundColor = PremiumTheme.colors.surface,
+                    onClick = {
+                        viewModel.seedDemoAssets(context)
+                    }
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(AppSpacing.md)
+                    ) {
+                        androidx.compose.material3.Icon(
+                            imageVector = AppIcons.Sparkles,
+                            contentDescription = null,
+                            tint = PremiumTheme.colors.secondary,
+                            modifier = Modifier.size(AppIconSize.large)
+                        )
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = "Load Demo Studio Assets",
+                                style = PremiumTheme.typography.titleMedium.copy(fontWeight = FontWeight.SemiBold),
+                                color = PremiumTheme.colors.textPrimary
+                            )
+                            Text(
+                                text = "Instantly generate curated high-res photography artwork to test library features, viewer, and editor.",
                                 style = PremiumTheme.typography.bodySmall,
                                 color = PremiumTheme.colors.textSecondary
                             )

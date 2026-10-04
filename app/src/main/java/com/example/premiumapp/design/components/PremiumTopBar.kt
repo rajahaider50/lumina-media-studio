@@ -78,8 +78,11 @@ fun PremiumTopBar(
         actions = actions,
         colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
             containerColor = PremiumTheme.colors.background,
-            scrolledContainerColor = PremiumTheme.colors.surfaceVariant
+            scrolledContainerColor = PremiumTheme.colors.background,
+            navigationIconContentColor = PremiumTheme.colors.textPrimary,
+            titleContentColor = PremiumTheme.colors.textPrimary,
+            actionIconContentColor = PremiumTheme.colors.textPrimary
         ),
-        windowInsets = WindowInsets.statusBars
+        windowInsets = TopAppBarDefaults.windowInsets
     )
 }

@@ -132,10 +132,22 @@ fun LuminaTheme(
 
     val context = LocalContext.current
     val colorScheme: ColorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            if (isDark) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-        }
         isAmoled -> AmoledColorScheme
+        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
+            if (isDark) {
+                dynamicDarkColorScheme(context).copy(
+                    background = DarkBackground,
+                    surface = DarkSurface,
+                    surfaceVariant = DarkSurfaceVariant
+                )
+            } else {
+                dynamicLightColorScheme(context).copy(
+                    background = LightBackground,
+                    surface = LightSurface,
+                    surfaceVariant = LightSurfaceVariant
+                )
+            }
+        }
         isDark -> DarkColorScheme
         else -> LightColorScheme
     }
