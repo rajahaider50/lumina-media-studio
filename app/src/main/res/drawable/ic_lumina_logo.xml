@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+    <!-- Gradient background rounded square -->
+    <path
+        android:pathData="M24,8 L72,8 A16,16 0,0 1 88,24 L88,72 A16,16 0,0 1 72,88 L24,88 A16,16 0,0 1 8,72 L8,24 A16,16 0,0 1 24,8 Z"
+        android:fillColor="#6366F1" />
+    <!-- Secondary overlapping accent -->
+    <path
+        android:pathData="M24,8 L48,8 A16,16 0,0 1 64,24 L64,72 A16,16 0,0 1 48,88 L24,88 A16,16 0,0 1 8,72 L8,24 A16,16 0,0 1 24,8 Z"
+        android:fillColor="#4F46E5" />
+    <!-- Aperture / Lens symbol -->
+    <path
+        android:pathData="M48,32 A16,16 0,1 0 48,64 A16,16 0,1 0 48,32 Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M48,22 L48,32 M48,64 L48,74 M22,48 L32,48 M64,48 L74,48"
+        android:strokeColor="#06B6D4"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M48,42 A6,6 0,1 0 48,54 A6,6 0,1 0 48,42 Z"
+        android:fillColor="#06B6D4" />
+</vector>

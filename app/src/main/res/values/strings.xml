@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Lumina Media</string>
+    <string name="app_tagline">Native Offline Media Studio</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_explore">Explore</string>
+    <string name="nav_collections">Collections</string>
+    <string name="nav_favorites">Favorites</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Actions -->
+    <string name="action_import">Import Media</string>
+    <string name="action_create_collection">Create Collection</string>
+    <string name="action_search">Search</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_save">Save</string>
+    <string name="action_save_copy">Save Copy</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_rename">Rename</string>
+    <string name="action_share">Share</string>
+    <string name="action_export">Export</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_view">View</string>
+    <string name="action_add_to_collection">Add to Collection</string>
+    <string name="action_remove_from_collection">Remove</string>
+    <string name="action_select_all">Select All</string>
+    <string name="action_deselect_all">Deselect All</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_get_started">Get Started</string>
+    <string name="action_skip">Skip</string>
+    <string name="action_next">Next</string>
+    <string name="action_back">Back</string>
+
+    <!-- Empty States -->
+    <string name="empty_home_title">Your Library is Clean</string>
+    <string name="empty_home_desc">Import photos and videos from your device to begin organizing your private local studio.</string>
+    <string name="empty_collections_title">No Collections Yet</string>
+    <string name="empty_collections_desc">Create organized albums and curated collections for your memories and projects.</string>
+    <string name="empty_favorites_title">No Favorites Yet</string>
+    <string name="empty_favorites_desc">Mark items as favorite to access them quickly from your dashboard.</string>
+    <string name="empty_search_title">No Results Found</string>
+    <string name="empty_search_desc">Try searching with a different filename, extension, or tag.</string>
+    <string name="empty_activity_title">No Recent Activity</string>
+    <string name="empty_activity_desc">Actions like importing, editing, and collection updates will appear here.</string>
+
+    <!-- Notification Channels -->
+    <string name="notification_channel_media">Media Operations</string>
+    <string name="notification_channel_media_desc">Background processing updates for media imports and exports</string>
+    <string name="notification_channel_alerts">System Alerts</string>
+    <string name="notification_channel_alerts_desc">Alerts for storage warnings and batch completions</string>
+
+    <!-- File Provider Authority -->
+    <string name="file_provider_authority">com.example.premiumapp.fileprovider</string>
+</resources>
